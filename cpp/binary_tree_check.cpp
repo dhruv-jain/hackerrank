@@ -11,11 +11,13 @@ The Node struct is defined as follows:
    }
 */
    bool checkBST(Node* root, int min, int max) {
-       if (root == NULL) {return true;}
+       if (root == NULL) {return true;} //base condition
        
-       if(root->data>max || root->data<min){return false;}
+       if(root->data>max || root->data<min){return false;} //checking range base condition one
        
        return (checkBST(root->left, min, root->data-1) && checkBST(root->right, root->data+1, max));
+      //checking if the left node is between the value of min and root-1 
+      //checking if the right node is between the value of root+1 and max
    }
 
 
