@@ -3,8 +3,7 @@
 using namespace std;
 
 int factorial(int n) {
-    // Complete this function
-}
+return factorial(n*(n-1));}
 
 int main() {
     int n;
