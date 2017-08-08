@@ -36,3 +36,39 @@ class Solution{
                return root;
            }
         }
+		int getHeight(Node* root){
+            //returns the height of the tree
+            
+            if(root == nullptr) {return -1;}
+            
+            int left_tree_height = getHeight(root->left);
+            int right_tree_height = getHeight(root->right);
+            
+            if (right_tree_height > left_tree_height) {
+                return right_tree_height + 1;
+            }
+            else return left_tree_height +1;
+        }
+
+}; //End of Solution
+
+int main() {
+    Solution myTree;
+    Node* root = NULL;
+    int t;
+    int data;
+
+    cin >> t;
+
+    while(t-- > 0){
+        cin >> data;
+        root = myTree.insert(root, data);
+    }
+    int height = myTree.getHeight(root);
+    cout << height;
+
+    return 0;
+}
+    
+       
+  
