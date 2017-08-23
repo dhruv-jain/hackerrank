@@ -6,7 +6,6 @@ CustomerID: 2001  bandwidth: 4000  CarrierType: B  Region: UK
 CustomerID: 1001  bandwidth: 2000  CarrierType: A  Region: US
 CustomerID: 3001  bandwidth: 1000  CarrierType: C  Region: JPN
 CustomerID: 2001  bandwidth: 500   CarrierType: B  Region: UK
-I would like to do the following:
 
 Find total bandwidth associated with each customer id
 Cost of Each Carrier Type is- carriertype A: $0.40 per KB, carriertype B: $0.60 per KB, carriertype C: 0.80 per KB List the customer ids with the greatest total amount in descending order
